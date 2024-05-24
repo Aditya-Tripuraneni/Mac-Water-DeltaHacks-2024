@@ -22,6 +22,15 @@ function insert_data(mainLocation, subLocation, status) {
             console.log('Data inserted');
         }
     });
+
+
+    db.close((err) => {
+        if (err) {
+            console.error('Error closing database:', err.message);
+        } else {
+            console.log('Closed the database connection');
+        }
+    });
 }
 
 // Update data

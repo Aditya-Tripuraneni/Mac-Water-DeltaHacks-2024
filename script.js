@@ -176,6 +176,7 @@ async function loadMobileNetFeatureModel() {
           STATUS.innerText = refillLocation + '\'s water refill station status has been set to ' + CLASS_NAMES[highestIndex] + '.';
           console.log("PREDICTION BASED: ", classification);
           predict = false; 
+          insert_data(refillLocation, "1st Floor", classification);
           return CLASS_NAMES[highestIndex];
         }
 
